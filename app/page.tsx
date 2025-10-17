@@ -6,7 +6,8 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-van
 import UserCard from "@/components/user-card";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-
+import LogRocket from "logrocket";
+import { useEffect } from "react";
 export default function Home() {
   const [people, setPeople] = useState<
     {
@@ -29,6 +30,14 @@ export default function Home() {
       setLoading(false);
     }, 5000);
   };
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      process.env.NEXT_PUBLIC_LOGROCKET_APP_ID
+    ) {
+      LogRocket.init(process.env.NEXT_PUBLIC_LOGROCKET_APP_ID);
+    }
+  }, []);
   return (
     <div className="h-screen flex flex-col   items-center px-4">
       <DottedGlowBackground
