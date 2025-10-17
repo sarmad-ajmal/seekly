@@ -2,12 +2,9 @@
 import { SearchInput } from "@/components/search-input";
 import DottedGlowBackground from "@/components/ui/dotted-glow-background";
 import { LoaderFive } from "@/components/ui/loader";
-import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import UserCard from "@/components/user-card";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
 import LogRocket from "logrocket";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 export default function Home() {
   const [people, setPeople] = useState<
     {

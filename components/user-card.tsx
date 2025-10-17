@@ -1,12 +1,10 @@
 "use client";
 
-import * as React from "react";
 import { cn } from "@/lib/utils";
-import { BadgeInfo, Check, Info } from "lucide-react";
-import { CardSpotlight } from "./ui/card-spotlight";
+import { Check, Info } from "lucide-react";
+import * as React from "react";
 import { Highlighter } from "./ui/highligher";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
-import { BorderBeam } from "./ui/border-beam";
 
 export type UserCardProps = {
   image: string;

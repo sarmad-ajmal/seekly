@@ -50,7 +50,3 @@ export function SearchInput({
     </form>
   );
 }
-function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
-  console.log("submitted", e.target);
-}
